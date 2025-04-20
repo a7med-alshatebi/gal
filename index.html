@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <img id="profile-pic" src="" alt="Profile" class="w-24 h-24 rounded-full mx-auto mb-4 shadow-lg">
+                <h2 id="username" class="text-2xl font-bold text-gray-800"></h2>
+            </div>
+            
+            <div class="relative overflow-hidden rounded-xl shadow-xl bg-white">
+                <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Slides will be injected here -->
+                </div>
+                
+                <!-- Navigation -->
+                <button id="prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-4 rounded-r-lg transition-colors">
+                    ‹
+                </button>
+                <button id="next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white p-4 rounded-l-lg transition-colors">
+                    ›
+                </button>
+                
+                <!-- Loading State -->
+                <div id="loading" class="absolute inset-0 bg-gray-100/80 flex items-center justify-center">
+                    <div class="animate-spin rounded-full h-12 w-12 border-4 border-gray-500 border-t-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
